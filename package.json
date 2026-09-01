@@ -1,0 +1,20 @@
+{
+  "name": "express-api-guard",
+  "version": "1.0.0",
+  "description": "Security and protection middleware toolkit for Express.js",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {},
+  "keywords": [
+    "express",
+    "security",
+    "middleware",
+    "rate-limit",
+    "api"
+  ],
+  "author": "Siddhi Tripathi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
