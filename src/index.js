@@ -1,12 +1,2 @@
-import crypto from "crypto";
-
-export function requestId() {
-  return (req, res, next) => {
-    const id = crypto.randomUUID();
-
-    req.requestId = id;
-    res.setHeader("X-Request-ID", id);
-
-    next();
-  };
-}
+export { requestId } from "./middleware/requestId.js";
+/// THIS MEANS - "Take the requestId function from this file and make it available from the main package."

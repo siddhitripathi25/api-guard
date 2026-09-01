@@ -4,7 +4,7 @@
   "description": "Security and protection middleware toolkit for Express.js",
   "main": "src/index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {"test": "vitest"},
   "keywords": [
     "express",
     "security",
@@ -16,5 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
   }
 }
