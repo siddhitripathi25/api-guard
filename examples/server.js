@@ -1,5 +1,5 @@
 import express from "express";
-import { requestId, rateLimiter } from "../src/index.js";
+import {requestId,rateLimiter,securityHeaders} from "../src/index.js";
 
 const app = express();
 
@@ -10,7 +10,19 @@ app.use(
     max: 5
   })
 );
-
+app.use(securityHeaders());
+///THIS WILL GIVE
+// Incoming Request
+//        ↓
+//   requestId()
+//        ↓
+//   rateLimiter()
+//        ↓
+// securityHeaders()
+//        ↓
+//      Route
+//        ↓
+//    Response
 app.get("/", (req, res) => {
   res.json({
     message: "API Guard is working!",
