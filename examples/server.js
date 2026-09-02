@@ -1,9 +1,10 @@
 import express from "express";
-import {requestId,rateLimiter,securityHeaders,ipGuard,requestSize} from "../src/index.js";
+import {requestId,rateLimiter,securityHeaders,ipGuard,requestSize,securityLogger} from "../src/index.js";
 
 const app = express();
 
 app.use(requestId());
+app.use(securityLogger());
 app.use(
   rateLimiter({
     windowMs: 60 * 1000,

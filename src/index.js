@@ -4,3 +4,4 @@ export { rateLimiter } from "./middleware/rateLimiter.js";
 export { securityHeaders } from "./middleware/securityHeaders.js";
 export { ipGuard } from "./middleware/ipGuard.js";
 export { requestSize } from "./middleware/requestSize.js";
+export { securityLogger } from "./middleware/securityLogger.js";
