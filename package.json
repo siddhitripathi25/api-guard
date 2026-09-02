@@ -2,18 +2,44 @@
   "name": "express-api-guard",
   "version": "1.0.0",
   "description": "Security and protection middleware toolkit for Express.js",
-  "main": "src/index.js",
   "type": "module",
-  "scripts": {"test": "vitest"},
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest"
+  },
   "keywords": [
     "express",
+    "expressjs",
     "security",
     "middleware",
     "rate-limit",
-    "api"
+    "api-security",
+    "request-id",
+    "security-headers",
+    "ip-blocking",
+    "request-size"
   ],
   "author": "Siddhi Tripathi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhitripathi25/api-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siddhitripathi25/api-guard/issues"
+  },
+  "homepage": "https://github.com/siddhitripathi25/api-guard#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "express": "^5.2.1"
   },
