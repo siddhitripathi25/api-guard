@@ -1,5 +1,5 @@
 import express from "express";
-import {requestId,rateLimiter,securityHeaders,ipGuard} from "../src/index.js";
+import {requestId,rateLimiter,securityHeaders,ipGuard,requestSize} from "../src/index.js";
 
 const app = express();
 
@@ -13,6 +13,11 @@ app.use(
 app.use(
   ipGuard({
     blockedIPs: ["192.168.1.100"]
+  })
+);
+app.use(
+  requestSize({
+    limit: 1024 * 1024
   })
 );
 app.use(securityHeaders());
